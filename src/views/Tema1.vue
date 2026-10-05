@@ -604,23 +604,23 @@
                   th(data-aos="fade-down")(style= "width: 33%") Definition of Done (DoD)
               tbody
                 tr
-                  td(data-aos="fade-down") Punto de aplicación.
+                  td(data-aos="fade-down") #[b Punto de aplicación.]
                   td(data-aos="fade-down") Fase de entrada: antes de planificar e iniciar la iteración (<em>sprint planning</em>).
                   td(data-aos="fade-down") Fase de salida: al finalizar el ciclo de desarrollo y pruebas de la tarea.
                 tr
-                  td(data-aos="fade-down") Objetivo central.
+                  td(data-aos="fade-down") #[b Objetivo central.]
                   td(data-aos="fade-down") Garantizar la claridad, viabilidad y comprensión del requerimiento.
                   td(data-aos="fade-down") Garantizar la excelencia técnica, la calidad y la ausencia de deuda técnica.
                 tr
-                  td(data-aos="fade-down") Liderazgo principal.
+                  td(data-aos="fade-down") #[b Liderazgo principal.]
                   td(data-aos="fade-down") <em>Product owner</em>, analistas de negocio y arquitecto.
                   td(data-aos="fade-down") Equipo de desarrolladores, ingenieros QA y DevOps.
                 tr
-                  td(data-aos="fade-down") Consecuencia de incumplir.
+                  td(data-aos="fade-down") #[b Consecuencia de incumplir.]
                   td(data-aos="fade-down") La historia #[b no] ingresa al sprint; se devuelve a refinamiento.
                   td(data-aos="fade-down") La historia #[b no] se da por terminada ni suma a la velocidad del <em>sprint</em>.
                 tr
-                  td(data-aos="fade-down") Lista de chequeo típica.
+                  td(data-aos="fade-down") #[b Lista de chequeo típica.]
                   td(data-aos="fade-down") 
                     ul.tabla-dor-dod__checklist
                       li

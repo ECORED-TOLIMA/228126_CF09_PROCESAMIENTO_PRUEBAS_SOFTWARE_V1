@@ -72,27 +72,27 @@
                   th(data-aos="fade-down")(style= "width: 25%") Alta fidelidad (<em>high-fidelity</em>)
               tbody
                 tr
-                  td(data-aos="fade-down") Representación gráfica.
+                  td(data-aos="fade-down") #[b Representación gráfica.]
                   td(data-aos="fade-down") Esquemática, monocromática o a mano alzada.
                   td(data-aos="fade-down") Estructurada, escala de grises, tipografías estándar.
                   td(data-aos="fade-down") Detallada, paleta de colores final, imágenes y tipografía real.
                 tr
-                  td(data-aos="fade-down") Interactividad.
+                  td(data-aos="fade-down") #[b Interactividad.]
                   td(data-aos="fade-down") Nula o simulación manual en papel.
                   td(data-aos="fade-down") Navegación básica entre pantallas mediante <em>clics</em>.
                   td(data-aos="fade-down") Animaciones, transiciones, microinteracciones y respuestas a eventos.
                 tr
-                  td(data-aos="fade-down") Herramientas de creación.
+                  td(data-aos="fade-down") #[b Herramientas de creación.]
                   td(data-aos="fade-down") Papel, lápiz, tableros, <em>balsamiq</em>.
                   td(data-aos="fade-down") Figma, Sketch, Adobe XD, Axure RP.
                   td(data-aos="fade-down") Figma, ProtoPie, InVision, código frontend (HTML / CSS).
                 tr
-                  td(data-aos="fade-down") Costo y tiempo.
+                  td(data-aos="fade-down") #[b Costo y tiempo.]
                   td(data-aos="fade-down") Ultrabajo y de ejecución inmediata.
                   td(data-aos="fade-down") Moderado, requiere estructuración de componentes.
                   td(data-aos="fade-down") Alto, requiere trabajo detallado de diseño UX / UI.
                 tr
-                  td(data-aos="fade-down") Momento de uso.
+                  td(data-aos="fade-down") #[b Momento de uso.]
                   td(data-aos="fade-down") Fases iniciales de ideación y <em>brainstorming</em>.
                   td(data-aos="fade-down") Definición de arquitectura y flujos de pantalla.
                   td(data-aos="fade-down") Validación con clientes y entrega a desarrolladores (<em>handoff</em>).

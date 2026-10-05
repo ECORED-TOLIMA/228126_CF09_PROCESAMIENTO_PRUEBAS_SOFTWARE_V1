@@ -15,7 +15,7 @@
         .col.col-lg-11.col-12.order-lg-2.order-2
           p.mb-0(data-aos="fade-down") En el panorama tecnológico actual, la construcción de aplicaciones <em>web</em> ha dejado de ser un proceso puramente artesanal de escritura de código para convertirse en una disciplina de ingeniería de <em>software</em> estructurada, multidisciplinaria y orientada a la calidad. La demanda de plataformas accesibles, seguras, escalables y altamente usables exige que los desarrolladores dominen no solo la sintaxis de lenguajes de programación o maquetación, sino también todo el flujo de trabajo que garantiza el éxito del producto digital.
 
-      .bloque-texto-g.color-primario.p-3.p-sm-4.p-md-5.mb-4(data-aos="flip-down")(style="")
+      .bloque-texto-g.color-primario.p-3.p-sm-4.p-md-5.mb-4(data-aos="flip-down")
         .bloque-texto-g__img.img-bg-01
         .bloque-texto-g__texto.p-4
           p.mb-0(data-aos="fade-down") Este componente formativo permite desarrollar las competencias necesarias para gestionar de manera sistemática cada etapa de la creación de aplicaciones <em>web</em>. Inicia con la comprensión del ciclo de vida del desarrollo de <em>software</em> y las metodologías ágiles que rigen la industria moderna. Posteriormente, se profundiza en la fase de experiencia e interfaz de usuario (UX / UI) mediante la elaboración de bocetos (<em>sketches</em>), esquemas de baja fidelidad (<em>wireframes</em>), maquetas de alta fidelidad (<em>mockups</em>) y flujos navegables (<em>wireflows</em>).
