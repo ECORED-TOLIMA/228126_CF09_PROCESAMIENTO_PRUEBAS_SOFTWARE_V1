@@ -1,36 +1,66 @@
-@use 'variables' as *
 .banner-principal-decorativo
   &-1
-    animation: float1 2.8s ease-in-out infinite alternate
+    animation: float1 1.5s ease-in-out infinite alternate
     position: absolute
-    top: 68%
-    left: -10%
-    width: 20%
+    top: 14%
+    right: 80%
+    width: 100px
   &-2
-    animation: float1 2.5s ease-in-out infinite alternate
+    animation: rotate1 2.8s ease-in-out infinite alternate
     position: absolute
-    top: 30%
+    top: 70%
     right: 10%
-    width: 20%
+  &-3
+    animation: rotate1 1.8s ease-in-out infinite alternate
+    position: absolute
+    top: 80%
+    right: 10%
 
+@keyframes rotate1
+  from
+    transform: rotate(0deg)
+
+  to
+    transform: rotate(360deg)
 
 @keyframes float1
+  0%
+    transform: translateY(20px)
+  100%
+    transform: translateY(0px)
+@keyframes float2
   0%
     transform: translateY(20px)
 
   100%
     transform: translateY(0px)
 
-.col-lg-7.col-xxl-5.ps-4.ps-sm-5.py-4.py-sm-5.banner-principal__info
-  flex: 0 0 auto !important
-  width: 58.33333333% !important
-.banner-principal__img 
-  padding-bottom: 0 !important;
-//.banner-principal__row .banner-principal__img 
-//    width: 33%;
-    
+// Modulo versión escritorio/movil
+@media (min-width:1400px)
+  .movil2
+    display: inline
+@media (min-width: 992px)
+  .desktop 
+    display: inline
+  .movil 
+    display: none
+@media (max-width: 991px)
+  .movil 
+    display: inline
+  .desktop 
+    display: none
+  
+.banner-principal .tarjeta
+  background-position: left 50% !important
+
+.banner-principal__row .banner-principal__img
+  width: 500px !important
+
 .banner-principal p, .banner-principal h1, .banner-principal h2, .banner-principal h3, .banner-principal h4, .banner-principal h5, .banner-principal h6
   color: $white !important  
+
+.banner-principal h1, .banner-principal h2, .banner-principal h3, .banner-principal h4, .banner-principal h5, .banner-principal h6, .banner-principal p
+  color: $black !important
 
 .boton *, .boton--sm *,
 .barra-avance__boton--regresar span
@@ -40,67 +70,1507 @@
 .banner-interno__titulo h5, .banner-interno__titulo h6
   color: $color-sistema-texto !important  
 .titulo-principal.color-acento-contenido .titulo-principal__numero span
-  color: $white !important
+  color: $black !important
 figcaption 
     font-weight: normal !important
 
 .banner-interno__titulo__icono i
-    color: $color-acento-botones !important;
+  color: $color-acento-contenido !important;
 
+.banner-interno__titulo__icono
+  background-color: $color-acento-botones
 
-/**************************************************************/
-/***CUSTOM STYLES***/
-/**************************************************************/
-.p-full-width
-  padding: 3rem 3.5rem!important;
-.bg-full-width
+.banner-principal
+  .container.tarjeta
+    background-image: url("../assets/curso/portada/fondo-banner-principal.png")
+    background-size: cover
+    background-position: center
+    @media (max-width: $bp-max-md)
+      background-image: url("../assets/curso/portada/fondo-banner-principal-md.png") !important
+    @media (max-width: $bp-max-xs)
+      background-image: url("../assets/curso/portada/fondo-banner-principal-sm.png") !important
+.banner-interno__fondo
+  background-image: url("../assets/curso/portada/banner.png") !important
+.barra-avance__boton--regresar 
+  span
+    color: #fff !important  
+
+.img-bg-01
+  background-image: url("../assets/curso/intro/img-02.png") !important
   background-size: cover
+  background-position: center
   background-repeat: no-repeat
-  background-position: bottom
-  margin-inline: -3.3rem
-.bg-fondo
+  background-color: #D5AAFF !important
+
+.img-bg-02
+  background-image: url("../assets/curso/t3/img-01.png") !important
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  background-color: #D5AAFF !important
+
+.img-bg-03
+  background-image: url("../assets/curso/t4/img-03.png") !important
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  background-color: #D5AAFF !important
+
+.cajon.C01
+  background-color: #F1E2FF
+
+.cajon.color-primario1:before
+  background-color: #F1E2FF
+  border-radius: 10px !important
+
+.cajon.C02
+  background-color: #FFE2C2 
+
+.cajon.C03
+  background-color: #DFD3E9
+
+.cajon.C04
+  background-image: url("../assets/curso/t1/img-11.png")
+  background-size: cover
+  background-position: center
+  overflow: hidden
+  border-radius: 10px !important
+
+.cajon.C05
+  background-color: #FFEBBE
+
+.cajon.C06
+  background-color: #F1E2FF
+  border-radius: 10px !important
+
+.tarjeta--C01
+  background-color: #F9E7E7
+
+//- Modulo acordions
+.acordion
+  .acordion__activo
+    background-color: #DFEFFF
+  .acordion__accion__btn--b
+    background-color: #A10000  
+    border: none
+    color: #ffffff
+  .acordion__accion__btn--a
+    background-color: #A10000
+    border: none
+    color: #ffffff
+
+.tarjeta.color-secundario.rosa
+  background-color: #F1E2FF
+
+.tarjeta.color-secundario.rosa .parrafo > b, h3, p
+  color: #000 !important
+
+.tarjeta.color-acento-botones.azul
+  background-color: #DFEFFF
+
+.tarjeta.color-acento-botones.azul .parrafo > b, h3, p, em
+  color: #000 !important
+
+.titulo01
+  position: relative
+  left: -2%
+  background-color: #FFDE92
+  border-radius: 20px
+  h3
+    color: black
+  @media screen and ( max-width: $bp-max-lg )
+    left: -3%
+  @media screen and ( max-width: $bp-max-sm )
+    left: -4%
+
+.recurso-terminal-sdlc
+  width: 100%
+  background-color: #100321
+  border-radius: 8px
+  overflow: hidden
+  box-shadow: none
+
+  &__header
+    width: 100%
+    height: 52px
+    background-color: #3F1E70
+    display: flex
+    align-items: center
+    gap: .9rem
+    padding: 0 1.8rem
+
+  &__circle
+    width: 14px
+    height: 14px
+    border-radius: 50%
+    display: inline-block
+
+    &--morado
+      background-color: #D6A6FF
+
+    &--azul
+      background-color: #8BCBFF
+
+    &--amarillo
+      background-color: #FFD86B
+
+  &__body
+    width: 100%
+    min-height: 285px
+    background-color: #100321
+    display: flex
+    align-items: flex-start
+    padding: 2.1rem 2.5rem
+    overflow-x: auto
+
+  &__code
+    margin: 0
+    color: #FFFFFF
+    font-family: "Courier New", monospace
+    font-size: 1rem
+    line-height: 1.28
+    font-weight: 700
+    white-space: pre
+    background: transparent
+    border: 0
+    padding: 0
+
+
+@media (max-width: 991.98px)
+  .recurso-terminal-sdlc
+    &__header
+      height: 48px
+      padding: 0 1.5rem
+
+    &__body
+      min-height: 260px
+      padding: 1.8rem 1.6rem
+
+    &__code
+      font-size: .9rem
+      line-height: 1.25
+
+
+@media (max-width: 575.98px)
+  .recurso-terminal-sdlc
+    border-radius: 7px
+
+    &__header
+      height: 44px
+      padding: 0 1.1rem
+      gap: .7rem
+
+    &__circle
+      width: 12px
+      height: 12px
+
+    &__body
+      min-height: 245px
+      padding: 1.4rem 1rem
+      overflow-x: auto
+
+    &__code
+      font-size: .75rem
+      line-height: 1.25
+
+.recurso-terminal-sdlc--escenarios
+  border-radius: 5px !important
+
+  .recurso-terminal-sdlc__header
+    height: 40px !important
+    padding: 0 1.4rem !important
+    gap: .8rem !important
+
+  .recurso-terminal-sdlc__circle
+    width: 12px !important
+    height: 12px !important
+
+  .recurso-terminal-sdlc__body
+    min-height: auto !important
+    padding: 1.6rem 1.8rem 1.7rem !important
+    overflow: hidden !important
+
+  .recurso-terminal-sdlc__code
+    width: 100%
+    max-width: 100%
+    white-space: pre-wrap !important
+    overflow-wrap: break-word !important
+    word-break: normal !important
+    font-family: "Roboto", sans-serif !important
+    font-size: 1.2rem !important
+    line-height: 1.18 !important
+    font-weight: 400 !important
+    color: #FFFFFF !important
+
+
+@media (max-width: 991.98px)
+  .recurso-terminal-sdlc--escenarios
+    .recurso-terminal-sdlc__header
+      height: 38px !important
+      padding: 0 1.2rem !important
+
+    .recurso-terminal-sdlc__body
+      padding: 1.4rem 1.3rem !important
+
+    .recurso-terminal-sdlc__code
+      font-size: 1rem !important
+      line-height: 1.2 !important
+
+
+@media (max-width: 575.98px)
+  .recurso-terminal-sdlc--escenarios
+    .recurso-terminal-sdlc__header
+      height: 36px !important
+      padding: 0 1rem !important
+
+    .recurso-terminal-sdlc__circle
+      width: 10px !important
+      height: 10px !important
+
+    .recurso-terminal-sdlc__body
+      padding: 1.2rem 1rem !important
+
+    .recurso-terminal-sdlc__code
+      font-size: 1rem !important
+      line-height: 1.2 !important
+
+.terminal-verde
+  color: #75FB67 !important
+
+.BG01
+  position: relative
+  z-index: 1
+  background: none !important
+  margin-inline: 0 !important
+  padding-left: 0 !important
+  padding-right: 0 !important
+
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 50%
+    width: 100vw
+    transform: translateX(-50%)
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(239,246,255,1) 25%, rgba(239,246,255,1) 75%, rgba(255,255,255,1) 100%)
+    z-index: -1
+
+  > [class*="col-"]
+    position: relative
+    z-index: 2
+    transform: translateX(-12px)
+
+.tabla-metodologias
+  table
+    width: 100%
+
+  thead
+    tr
+      background-color: #FFEBBE !important
+
+  tbody
+    tr
+      background-color: #FFFFFF
+
+      &:nth-child(odd)
+        background-color: #FBFAF2 !important
+
+  th
+    color: #12263F
+    font-weight: 700
+    text-align: center
+    vertical-align: middle
+
+  td
+    color: #12263F
+    vertical-align: middle
+
+    b
+      font-weight: 700
+
+@media (max-width: 575.98px)
+  .tabla-metodologias
+    th,
+    td
+      font-size: .9rem
+      line-height: 1.35
+      padding: .7rem .6rem
+
+.titulo-recurso-pruebas
+  display: inline-flex
+  align-items: center
+  background-color: #FFEBBE
+  border-left: 7px solid #7A4F1E
+  padding: .45rem 1.4rem .45rem 1rem
+
+  span
+    color: #12263F
+    font-weight: 800
+    line-height: 1.2
+
+
+.recurso-pruebas-funcionales
+  width: 100%
+
+  &__item
+    position: relative
+    min-height: 118px
+    margin-bottom: 1.25rem
+
+    &:last-child
+      margin-bottom: 0
+
+  &__icono
+    width: 105px
+    height: 105px
+    position: absolute
+    left: 0
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 2
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: contain
+      display: block
+
+  &__contenido
+    min-height: 118px
+    background-color: #DDEEFE
+    border-radius: 8px
+    margin-left: 3.4rem
+    padding: 2rem 2rem 2rem 6rem
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    h4
+      color: #12263F
+      font-size: 1rem
+      font-weight: 700
+      margin-bottom: .35rem
+
+    p
+      color: #12263F
+      font-size: 1rem
+      line-height: 1.45
+
+
+@media (max-width: 991.98px)
+  .recurso-pruebas-funcionales
+    &__item
+      min-height: auto
+      margin-bottom: 1.5rem
+
+    &__icono
+      width: 90px
+      height: 90px
+
+    &__contenido
+      min-height: 110px
+      margin-left: 3rem
+      padding: 1.5rem 1.4rem 1.5rem 5rem
+
+      h4
+        font-size: 1rem
+
+      p
+        font-size: 1rem
+        line-height: 1.4
+
+
+@media (max-width: 575.98px)
+  .titulo-recurso-pruebas
+    padding: .45rem 1rem .45rem .8rem
+
+  .recurso-pruebas-funcionales
+    &__item
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-bottom: 1.5rem
+
+    &__icono
+      position: relative
+      left: auto
+      top: auto
+      transform: none
+      width: 82px
+      height: 82px
+      margin-bottom: -.8rem
+
+    &__contenido
+      width: 100%
+      margin-left: 0
+      padding: 1.8rem 1rem 1.2rem
+      text-align: center
+      min-height: auto
+
+      h4
+        font-size: 1rem
+
+      p
+        font-size: 1rem
+        line-height: 1.4
+
+.recurso-pruebas-no-funcionales
+  position: relative
+  width: 100%
+  padding: 2rem 2.2rem
+  background-image: url("../assets/curso/t1/img-11.png")
+  background-size: cover
+  background-position: center
+  overflow: hidden
+
+  &__lista
+    position: relative
+    z-index: 1
+    list-style: none
+    padding: 0
+    margin: 0
+
+    li
+      display: flex
+      align-items: flex-start
+      gap: .55rem
+      margin-bottom: 1.35rem
+
+      &:last-child
+        margin-bottom: 0
+
+      i
+        color: #F9A833
+        font-size: 1rem
+        line-height: 1.4
+        margin-top: .1rem
+
+  &__texto
+    p
+      color: #12263F
+      font-size: 1rem
+      line-height: 1.45
+
+      b
+        font-weight: 700
+
+.franja-pruebas-no-funcionales
+  position: relative
+  z-index: 1
+  padding-top: 1.4rem
+  padding-bottom: 1.6rem
+
+  &::before
+    content: ''
+    position: absolute
+    top: -1rem
+    bottom: -1rem
+    left: 50%
+    width: 100vw
+    transform: translateX(-50%)
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(234, 246, 255, .95) 18%, rgba(234, 246, 255, .95) 82%, rgba(255, 255, 255, 1) 100%)
+    z-index: -1
+    pointer-events: none
+
+@media (max-width: 991.98px)
+  .franja-pruebas-no-funcionales
+    padding-top: 1.2rem
+    padding-bottom: 1.4rem
+
+  .recurso-pruebas-no-funcionales
+    padding: 1.7rem 1.6rem
+
+
+@media (max-width: 575.98px)
+  .franja-pruebas-no-funcionales
+    padding-top: 1rem
+    padding-bottom: 1.2rem
+
+    &::before
+      top: -.8rem
+      bottom: -.8rem
+
+  .recurso-pruebas-no-funcionales
+    padding: 1.3rem 1rem
+
+.linea-tiempo-d.color-acento-botones.especial
+  .linea-tiempo-d__item--selected
+    .linea-tiempo-d__item__content
+      background-color: #DFEFFF !important 
+    .tarjeta.tarjeta--gris
+      background-color: #9ECFFF
+      span
+        color: $black
+  .linea-tiempo-d__item--selected .linea-tiempo-d__item__content__title
+    span
+      color: #000 !important
+  .linea-tiempo-d__item__content.tarjeta.tarjeta--gris
+    background-color: #F9E7E7
+.tarjeta.tarjeta--gris
+  background-color: #A10000
+.linea-tiempo-d__item__number
+  span
+    color: #fff
+
+//- Modulo medidas imagenes
+.img75
+  width: 75px 
+.img80
+  width: 80px 
+.img85
+  width: 85px 
+.img90
+  width: 90px 
+.img50
+  width: 50px
+.img100
+  width: 100px
+.img120
+  width: 120px
+.img130
+  width: 130px
+.img150
+  width: 150px
+.img180
+  width: 180px
+.img200
+  width: 200px
+.img250
+  width: 250px
+.img280
+  width: 280px
+.img310
+  width: 310px
+.img400
+  width: 400px
+//- Modulo crd x4 (1)
+.crd
+  &.brd--rad
+    border-radius: 20px 
+  &.crd--grayGrad
+    padding: 2.4rem
+    height: 100%
+    background-color: #F9E7E7
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    height: 100%
+    border-radius: 15px    
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
+    &:hover      
+      background-color: #F1E2FF
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center
+      h5
+        color: $black !important
+      background-repeat: no-repeat
+      background-position: center
+      .bottomCircle
+        &::before
+          background-color: #D5AAFF
+  &.crd--blue
+    background-color: #69D7E5
+  &.crd--border
+    border: 4px solid $color-acento-botones
+    border-radius: 20px
+.bottomCircle
+  position: relative
+  & > *
+    position: relative
+  &::before
+    content: ""
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    width: 100px
+    height: 100px
+    background-color: #F9E7E7
+    border-radius: 999px
+
+.tarjetas-given-when
+  .crd-given-when
+    height: 100%
+    min-height: 240px
+    background-color: #F9E7E7
+    border-radius: 14px
+    padding: 1.7rem 1.2rem 1.6rem
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    transition: background-color .3s ease, transform .3s ease
+    overflow: hidden
+
+    &:hover
+      background-color: #F1E2FF
+
+      .crd-given-when__img--normal
+        opacity: 0
+
+      .crd-given-when__img--hover
+        opacity: 1
+
+    &__icono
+      width: 105px
+      height: 105px
+      position: relative
+      display: flex
+      align-items: center
+      justify-content: center
+
+      figure
+        width: 100%
+        height: 100%
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+
+    &__img
+      width: 100%
+      height: 100%
+      object-fit: contain
+      display: block
+      transition: opacity .3s ease
+
+      &--normal
+        opacity: 1
+
+      &--hover
+        position: absolute
+        inset: 0
+        opacity: 0
+
+    h5
+      color: #12263F
+      font-size: 1rem
+      font-weight: 800
+      line-height: 1.25
+      margin-bottom: 1rem
+
+      em
+        font-style: italic
+
+    p
+      color: #12263F
+      font-size: 1rem
+      line-height: 1.45
+
+
+@media (max-width: 1199.98px)
+  .tarjetas-given-when
+    .crd-given-when
+      min-height: 230px
+      padding: 1.6rem 1.2rem
+
+      &__icono
+        width: 100px
+        height: 100px
+
+
+@media (max-width: 991.98px)
+  .tarjetas-given-when
+    .crd-given-when
+      min-height: 220px
+
+      p
+        font-size: 1rem
+
+
+@media (max-width: 575.98px)
+  .tarjetas-given-when
+    .crd-given-when
+      min-height: auto
+      padding: 1.5rem 1rem
+
+      &__icono
+        width: 90px
+        height: 90px
+
+      h5
+        font-size: 1rem
+
+      p
+        font-size: 1rem
+        line-height: 1.4
+
+.recurso-dor-dod
+  background-color: #DFEFFF
+  padding: 1.2rem 1rem
+  width: 100%
+
+  &__icono
+    width: 78px
+    min-width: 78px
+    background-color: #9ECFFF
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 1rem
+    margin-right: 1rem
+
+    img
+      width: 100%
+      max-width: 46px
+
+  &__texto
+    p
+      margin-bottom: 0
+      color: #12263F
+      line-height: 1.5
+
+  &__img
+    display: block
+    border-radius: 10px
+
+@media (max-width: 991.98px)
+  .recurso-dor-dod
+    padding: 1rem
+
+    &__icono
+      width: 72px
+      min-width: 72px
+      padding: .9rem
+      margin-right: .9rem
+
+@media (max-width: 767.98px)
+  .recurso-dor-dod
+    &__icono
+      margin-right: .8rem
+
+    &__texto
+      p
+        font-size: 1rem
+        line-height: 1.45
+
+@media (max-width: 575.98px)
+  .recurso-dor-dod
+    padding: .9rem
+
+    .row
+      align-items: flex-start
+
+    &__icono
+      width: 64px
+      min-width: 64px
+      padding: .8rem
+      margin-right: .75rem
+
+    &__texto
+      p
+        font-size: 1rem
+        line-height: 1.4
+
+.recurso-dor-dod2
+  background-color: #FFEBBE
+  padding: 1.2rem 1rem
+  width: 100%
+
+  &__icono
+    width: 78px
+    min-width: 78px
+    background-color: #9ECFFF
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 1rem
+    margin-right: 1rem
+
+    img
+      width: 100%
+      max-width: 46px
+
+  &__texto
+    p
+      margin-bottom: 0
+      color: #12263F
+      line-height: 1.5
+
+  &__img
+    display: block
+    border-radius: 10px
+
+@media (max-width: 991.98px)
+  .recurso-dor-dod2
+    padding: 1rem
+
+    &__icono
+      width: 72px
+      min-width: 72px
+      padding: .9rem
+      margin-right: .9rem
+
+@media (max-width: 767.98px)
+  .recurso-dor-dod2
+    &__icono
+      margin-right: .8rem
+
+    &__texto
+      p
+        font-size: 1rem
+        line-height: 1.45
+
+@media (max-width: 575.98px)
+  .recurso-dor-dod2
+    padding: .9rem
+
+    .row
+      align-items: flex-start
+
+    &__icono
+      width: 64px
+      min-width: 64px
+      padding: .8rem
+      margin-right: .75rem
+
+    &__texto
+      p
+        font-size: 1rem
+        line-height: 1.4
+
+.recurso-dod-comparacion
+  &__texto
+    height: 100%
+    background-color: #FFEBBE
+    border-radius: 8px
+    padding: 1.6rem 1.8rem
+    display: flex
+    align-items: center
+
+    p
+      color: #12263F
+      font-size: 1rem
+      line-height: 1.45
+
+  &__imagen
+    height: 100%
+    background-color: #FFDE92
+    border-radius: 8px
+    padding: .6rem
+    display: flex
+    align-items: center
+    justify-content: center
+
+    figure
+      width: 100%
+      height: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: contain
+      display: block
+
+
+@media (max-width: 991.98px)
+  .recurso-dod-comparacion
+    &__texto
+      padding: 1.4rem 1.5rem
+
+      p
+        font-size: 1rem
+        line-height: 1.45
+
+    &__imagen
+      min-height: 180px
+      padding: .8rem
+
+      img
+        max-height: 180px
+
+
+@media (max-width: 575.98px)
+  .recurso-dod-comparacion
+    &__texto
+      padding: 1.2rem 1rem
+
+      p
+        font-size: 1rem
+        line-height: 1.4
+
+    &__imagen
+      min-height: 160px
+
+      img
+        max-height: 160px
+
+.tabla-dor-dod
+  tbody
+    tr:last-child
+      td
+        vertical-align: middle !important
+
+      td:nth-child(2),
+      td:nth-child(3)
+        text-align: left !important
+        padding: 1.8rem 1.5rem !important
+
+  &__checklist
+    list-style: none
+    padding: 0
+    margin: 0 auto
+    max-width: 320px
+
+    li
+      display: flex
+      align-items: flex-start
+      gap: .5rem
+      margin-bottom: .65rem
+      color: #12263F
+      font-size: 1rem
+      line-height: 1.25
+      text-align: left
+
+      &:last-child
+        margin-bottom: 0
+
+      i
+        color: #F9A833 !important
+        font-size: 1rem
+        line-height: 1.25
+        margin-top: .1rem
+        flex: 0 0 auto
+
+      span
+        display: block
+        color: #12263F
+
+
+@media (max-width: 991.98px)
+  .tabla-dor-dod
+    tbody
+      tr:last-child
+        td:nth-child(2),
+        td:nth-child(3)
+          padding: 1.4rem 1rem !important
+
+    &__checklist
+      max-width: 100%
+
+      li
+        font-size: 1rem
+        line-height: 1.25
+
+
+@media (max-width: 575.98px)
+  .tabla-dor-dod
+    &__checklist
+      li
+        font-size: 1rem
+        gap: .45rem
+
+        i
+          font-size: .8rem
+
+.figura-flujo-ajuste
+  figure
+    margin-left: 0 !important
+    margin-right: 0 !important
+
+    img
+      display: block
+      width: 100%
+      margin-left: 0 !important
+      margin-right: 0 !important
+
+.recurso-prototipado
+  align-items: stretch
+
+  &__img
+    width: 100%
+    height: 100%
+    margin: 0 !important
+
+    img
+      width: 100%
+      height: 100%
+      min-height: 230px
+      object-fit: cover
+      object-position: center
+      display: block
+
+  &__cajon
+    width: 100%
+    height: 100%
+    min-height: 230px
+    background-color: #FFEBBE
+    padding: 1.6rem 1.8rem
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+  &__icono
+    width: 70px
+    height: 70px
+    margin: 0 0 1rem 0 !important
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: contain
+      display: block
+
+  p
+    color: #12263F
+    font-size: 1rem
+    line-height: 1.45
+
+
+@media (max-width: 991.98px)
+  .recurso-prototipado
+    &__img
+      img
+        min-height: 220px
+
+    &__cajon
+      min-height: auto
+      padding: 1.4rem 1.5rem
+
+    &__icono
+      width: 66px
+      height: 66px
+
+    p
+      font-size: .95rem
+      line-height: 1.45
+
+
+@media (max-width: 575.98px)
+  .recurso-prototipado
+    &__img
+      img
+        min-height: 200px
+
+    &__cajon
+      padding: 1.2rem 1rem
+
+    &__icono
+      width: 62px
+      height: 62px
+
+    p
+      font-size: .9rem
+      line-height: 1.4
+
+.recurso-prototipado
+  align-items: stretch
+
+  &__img
+    width: 100%
+    height: 100%
+    margin: 0 !important
+
+    img
+      width: 100%
+      height: 100%
+      min-height: 230px
+      object-fit: cover
+      object-position: center
+      display: block
+
+  &__cajon
+    width: 100%
+    height: 100%
+    min-height: 230px
+    background-color: #FFEBBE
+    padding: 1.6rem 1.8rem
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+  &__icono
+    width: 70px
+    height: 70px
+    margin: 0 0 1rem 0 !important
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: contain
+      display: block
+
+  p
+    color: #12263F
+    font-size: 1rem
+    line-height: 1.45
+
+
+@media (max-width: 991.98px)
+  .recurso-prototipado
+    &__img
+      img
+        min-height: 220px
+
+    &__cajon
+      min-height: auto
+      padding: 1.4rem 1.5rem
+
+    &__icono
+      width: 66px
+      height: 66px
+
+    p
+      font-size: .95rem
+      line-height: 1.45
+
+
+@media (max-width: 575.98px)
+  .recurso-prototipado
+    &__img
+      img
+        min-height: 200px
+
+    &__cajon
+      padding: 1.2rem 1rem
+
+    &__icono
+      width: 62px
+      height: 62px
+
+    p
+      font-size: .9rem
+      line-height: 1.4
+
+// Código tarjetas x3
+
+.recurso-caracteristicas-cortas
+  row-gap: 2.5rem
+
+  > [class*="col-"]
+    display: flex
+
+  &__item
+    width: 100%
+    height: 100%
+
+    > img
+      width: 135px !important
+      height: 135px !important
+      object-fit: contain
+      z-index: 2
+
+    .tarjeta.color-primario
+      width: 100%
+      min-height: 170px
+      background-color: #DFEFFF !important
+      border-radius: 16px !important
+      display: flex
+      align-items: center
+      justify-content: center
+      padding-top: 3.5rem
+
+      .p-4
+        width: 100%
+        padding: 1.5rem 1rem !important
+
+      h4
+        color: #12263F
+        font-weight: 700
+        font-size: 1.2rem
+        line-height: 1.25
+        margin-bottom: 1rem
+
+      p
+        color: #12263F
+        font-size: 1rem
+        line-height: 1.4
+
+    .tarjeta.color-secundario
+      width: 100%
+      min-height: 170px
+      background-color: #FFE2C2 !important
+      border-radius: 16px !important
+      display: flex
+      align-items: center
+      justify-content: center
+      padding-top: 3.5rem
+
+      .p-4
+        width: 100%
+        padding: 1.5rem 1rem !important
+
+      h4
+        color: #12263F
+        font-weight: 700
+        font-size: 1.2rem
+        line-height: 1.25
+        margin-bottom: 1rem
+
+      p
+        color: #12263F
+        font-size: 1rem
+        line-height: 1.4
+
+@media (max-width: 991.98px)
+  .recurso-caracteristicas-cortas
+    row-gap: 2rem
+
+    &__item
+      > img
+        width: 125px !important
+        height: 125px !important
+
+      .tarjeta.color-primario
+        min-height: 165px
+        padding-top: 3.2rem
+
+        h4
+          font-size: 1rem
+
+        p
+          font-size: 1rem
+
+@media (max-width: 575.98px)
+  .recurso-caracteristicas-cortas
+    row-gap: 1.8rem
+
+    &__item
+      > img
+        width: 115px !important
+        height: 115px !important
+
+      .tarjeta.color-primario
+        min-height: 155px
+        padding-top: 3rem
+        border-radius: 14px !important
+
+        .p-4
+          padding: 1.3rem 1rem !important
+
+        h4
+          font-size: 1rem
+          margin-bottom: .7rem
+
+        p
+          font-size: 1rem
+          line-height: 1.35
+
+.recurso-terminal-sdlc__code--centrado
+  width: 100%
+  text-align: center !important
+  font-family: "Courier New", monospace !important
+  white-space: pre !important
+  font-size: 1rem !important
+  line-height: 1.35 !important
+  overflow-x: auto !important
+
+@media (max-width: 991.98px)
+  .recurso-terminal-sdlc__code--centrado
+    font-size: .82rem !important
+
+@media (max-width: 575.98px)
+  .recurso-terminal-sdlc__code--centrado
+    font-size: .68rem !important
+
+.codigo-html-responsive
+  color: #FFFFFF
+  font-family: "Courier New", monospace !important
+  font-size: 1rem !important
+  line-height: 1.35 !important
+  white-space: pre-wrap !important
+
+  &__comentario
+    color: #7E7895
+
+  &__tag
+    color: #4E9DF9
+
+  &__atributo
+    color: #E688C5
+
+  &__valor
+    color: #5CCD6F
+
+.tabs-pruebas-web
+  .tabs-c__header
+    display: flex !important
+    margin-bottom: 0 !important
+    border-bottom: 4px solid #B40000 !important
+    gap: 0 !important
+
+  .tabs-c__tab
+    flex: 0 0 25% !important
+    max-width: 25% !important
+    min-height: 52px !important
+    padding: .8rem 1rem !important
+    background-color: #B40000 !important
+    border: 0 !important
+    border-radius: 0 !important
+    color: #FFFFFF !important
+    display: flex !important
+    align-items: center !important
+    justify-content: center !important
+    text-align: center !important
+    font-size: .88rem !important
+    font-weight: 700 !important
+    line-height: 1.2 !important
+
+    span
+      color: inherit !important
+      font-weight: 700 !important
+      line-height: 1.2 !important
+
+    &:not(:last-child)
+      border-right: 1px solid rgba(255, 255, 255, .55) !important
+
+    &::before,
+    &::after
+      display: none !important
+
+  .tabs-c__tab--active
+    background-color: #FFFFFF !important
+    color: #12263F !important
+
+  .tabs-c__content-item
+    background-color: #DDEEFE !important
+    padding: 1.9rem 2.4rem !important
+    border: 0 !important
+
+    > div
+      padding: 0 !important
+
+    .row
+      margin: 0 !important
+      align-items: center !important
+
+    figure
+      margin: 0 !important
+
+      img
+        width: 100% !important
+        max-width: 292px !important
+        display: block !important
+        margin: 0 auto !important
+
+    p
+      color: #12263F !important
+      font-size: .86rem !important
+      line-height: 1.45 !important
+      margin-bottom: 1rem !important
+
+      &:last-child
+        margin-bottom: 0 !important
+
+      b
+        font-weight: 700 !important
+
+
+@media (max-width: 991.98px)
+  .tabs-pruebas-web
+    .tabs-c__header
+      flex-wrap: wrap !important
+
+    .tabs-c__tab
+      flex: 0 0 50% !important
+      max-width: 50% !important
+      min-height: 50px !important
+      font-size: .84rem !important
+
+    .tabs-c__content-item
+      padding: 1.5rem 1.3rem !important
+
+      figure
+        margin-bottom: 1rem !important
+
+        img
+          max-width: 260px !important
+
+      p
+        font-size: .84rem !important
+
+
+@media (max-width: 575.98px)
+  .tabs-pruebas-web
+    .tabs-c__tab
+      flex: 0 0 100% !important
+      max-width: 100% !important
+      min-height: 46px !important
+      font-size: .82rem !important
+
+    .tabs-c__content-item
+      padding: 1.2rem 1rem !important
+
+      figure
+        img
+          max-width: 230px !important
+
+      p
+        font-size: .82rem !important
+        line-height: 1.4 !important
+
+.bg
+  //colores básicos del componente formativo---------
+  &-base 
+    background-color: #9ECFFF !important
+  &-base2
+    background-color: #CF9EFF
+  &-base3
+    background-color: #FFD470
+  &-base4
+    background-color: #9C2424
   &-1
-    //background-image: url(../assets/curso/bg/3.svg)
-.bg-color
-  &-1
-    background-color: $color-primario
+    background-color: #DFEFFF
 
+.recurso-elementos-prueba
+  padding: 1.4rem 1.6rem !important
+  min-height: 115px
 
+  figure
+    width: 70px
+    height: 70px
+    margin: 0 !important
+    padding: 0 !important
 
+    img
+      width: 70px
+      height: 70px
+      object-fit: contain
+      display: block
+      margin: 0 !important
 
+  p
+    color: #12263F
+    font-size: 1rem
+    line-height: 1.45
+    margin-bottom: 0 !important
+    padding-left: .8rem
 
+@media (max-width: 991.98px)
+  .recurso-elementos-prueba
+    padding: 1.3rem 1.4rem !important
+    min-height: auto
 
+    p
+      padding-left: 0
+      font-size: 1rem
+      line-height: 1.45
 
-/**************************************************************/
-/*Media Queries*/  
-/**************************************************************/
+@media (max-width: 575.98px)
+  .recurso-elementos-prueba
+    padding: 1.1rem 1rem !important
 
-//// DESKTOP SMALL 1400--------------------------------------
-@media screen and (max-width: $bp-min-xxl)
-  .mb-cus
-    margin-bottom: 2em  !important 
+    p
+      font-size: 1rem
+      line-height: 1.4
 
-//// TABLET 992--------------------------------------
-@media screen and (max-width: $bp-max-md)
-  .mb-cus
-    margin-bottom: 2em  !important  
-  .col-lg-7.col-xxl-5.ps-4.ps-sm-5.py-4.py-sm-5.banner-principal__info
-    width: 90% !important
-
-  
- 
-  
-//// TABLET MINI 768--------------------------------------
-@media screen and (max-width: $bp-min-md)
-  .mb-cus
-    margin-bottom: 2em  !important  
-
-  
-
-//// MOBILE 576--------------------------------------
-@media screen and (max-width: $bp-min-sm)
-  .mb-cus
-    margin-bottom: 2em  !important
-
-  
- 
+// modulo tabs
+.tabs-c__content-item
+  background-color: #DFEFFF
+.tabs-c__tab
+  background-color: #A10000
+  color: #fff !important
+.tabs-c__tab--active
+  background-color: #fff !important
+  color: #000 !important
+.tabs-c__header
+  margin-bottom: 0 !important
+.tabs-c.color-acento-botones .tabs-c__tab--active
+  font-weight: 700
+.tabs-c.color-acento-botones .tabs-c__tab--active:before
+  z-index: -1

@@ -1,12 +1,14 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
-import Inicio from '@ecored-sena/boulder-kit/plugin/components/Inicio.vue'
-import Curso from '@ecored-sena/boulder-kit/plugin/components/plantilla/Curso.vue'
-import Glosario from '@ecored-sena/boulder-kit/plugin/components/Glosario.vue'
-import Referencias from '@ecored-sena/boulder-kit/plugin/components/Referencias.vue'
-import Creditos from '@ecored-sena/boulder-kit/plugin/components/Creditos.vue'
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import Inicio from 'ecored-pkg-fliz/plugin/components/Inicio.vue'
+import Curso from 'ecored-pkg-fliz/plugin/components/plantilla/Curso.vue'
+import Glosario from 'ecored-pkg-fliz/plugin/components/Glosario.vue'
+import Referencias from 'ecored-pkg-fliz/plugin/components/Referencias.vue'
+import Creditos from 'ecored-pkg-fliz/plugin/components/Creditos.vue'
 
-const router = createRouter({
-  history: createWebHashHistory(),
+Vue.use(VueRouter)
+
+const router = new VueRouter({
   routes: [
     {
       path: '/',
@@ -45,6 +47,18 @@ const router = createRouter({
           component: () =>
             import(/* webpackChunkName: "tema3" */ '../views/Tema3.vue'),
         },
+        {
+          path: 'tema4',
+          name: 'tema4',
+          component: () =>
+            import(/* webpackChunkName: "tema4" */ '../views/Tema4.vue'),
+        },
+        {
+          path: 'tema5',
+          name: 'tema5',
+          component: () =>
+            import(/* webpackChunkName: "tema5" */ '../views/Tema5.vue'),
+        },
       ],
     },
     {
@@ -67,7 +81,7 @@ const router = createRouter({
       path: '/sintesis',
       name: 'sintesis',
       component: () =>
-        import(/* webpackChunkName: "sintesis" */ '../views/Sintesis.vue'),
+        import(/* webpackChunkName: "sintesis" */ '../views/sintesis.vue'),
     },
     {
       path: '/creditos',
@@ -78,14 +92,14 @@ const router = createRouter({
   scrollBehavior(to, from) {
     if (to.hash) {
       const newRoute = {
-        el: to.hash,
-        top: 100,
+        selector: to.hash,
+        offset: { y: 100 },
         behavior: 'smooth',
       }
       if (to.name === from.name) {
         return newRoute
       } else {
-        return new Promise((resolve) => {
+        return new Promise(resolve => {
           setTimeout(() => {
             resolve(newRoute)
           }, 500)
