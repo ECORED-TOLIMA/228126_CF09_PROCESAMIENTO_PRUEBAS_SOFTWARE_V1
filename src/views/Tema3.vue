@@ -155,7 +155,7 @@
                   td(data-aos="fade-down") Basada en el cumplimiento de hitos y documentos de la fase.
                   td(data-aos="fade-down") Basada en el avance hacia los objetivos y en incrementos utilizables del producto.
                 tr
-                  td(data-aos="fade-down") #[b articipación del cliente.]
+                  td(data-aos="fade-down") #[b Participación del cliente.]
                   td(data-aos="fade-down") Alta al inicio (requisitos) y al final (pruebas).
                   td(data-aos="fade-down") Continua y constante a lo largo de cada iteración.
 

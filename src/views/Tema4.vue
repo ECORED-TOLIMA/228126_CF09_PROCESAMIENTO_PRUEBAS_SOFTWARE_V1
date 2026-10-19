@@ -246,13 +246,13 @@
                   i.fas.fa-file-code
                   .recurso-pruebas-no-funcionales__texto
                     p.mb-0 
-                      | Enlaces internos
+                      | Enlaces internos.
                       | Conectan recursos dentro del mismo dominio, fortaleciendo la estructura de navegación y la transferencia de autoridad SEO.
                 li
                   i.fas.fa-file-code
                   .recurso-pruebas-no-funcionales__texto
                     p.mb-0 
-                      | Enlaces externos
+                      | Enlaces externos.
                       | Redirigen a dominios de terceros. Deben incluir atributos de seguridad como rel="noopener noreferrer" al utilizar target="_blank" para prevenir ataques de secuestro de pestaña (tabnabbing).
                 li
                   i.fas.fa-file-code
@@ -389,17 +389,17 @@
                 tr
                   td(data-aos="fade-down") #[b Creative Commons (CC BY).]
                   td(data-aos="fade-down") Uso libre para fines comerciales y no comerciales.
-                  td(data-aos="fade-down") Requisito de Atribución: se debe citar obligatoriamente al autor original.
+                  td(data-aos="fade-down") Requisito de atribución: se debe citar obligatoriamente al autor original.
                   td(data-aos="fade-down") Fotografías, ilustraciones y otros recursos publicados bajo CC BY.
                 tr
                   td(data-aos="fade-down") #[b CC BY-NC.]
                   td(data-aos="fade-down") Uso libre para modificaciones y distribución.
-                  td(data-aos="fade-down") No Comercial: prohibido su uso en productos que generen ingresos.
+                  td(data-aos="fade-down") No comercial: prohibido su uso en productos que generen ingresos.
                   td(data-aos="fade-down") Recursos educativos o de investigación publicados bajo esta licencia.
                 tr
                   td(data-aos="fade-down") #[b CC BY-SA.]
                   td(data-aos="fade-down") Uso y modificación libres.
-                  td(data-aos="fade-down") Compartir Igual: las obras derivadas deben publicarse bajo la misma licencia.
+                  td(data-aos="fade-down") Compartir igual: las obras derivadas deben publicarse bajo la misma licencia.
                   td(data-aos="fade-down") Contenidos y recursos abiertos publicados bajo CC BY-SA (Wikipedia).
                 tr
                   td(data-aos="fade-down") #[b Licencia MIT (código).]
@@ -466,6 +466,7 @@
                 li.mb-0 
                   i.lista-ul__vineta
                   | Estructura: modelos flexibles que pueden organizar la información mediante documentos, pares clave-valor u otras estructuras, según el tipo de base de datos utilizado. 
+                li.mb-0  
                   i.lista-ul__vineta
                   | Caso de uso: gestores de contenido (CMS), <em>blogs</em>, redes sociales y aplicaciones que manejan grandes volúmenes de información con estructuras variables. 
 
@@ -482,6 +483,7 @@
                 li.mb-0 
                   i.lista-ul__vineta
                   | Estructura: utilizan objetos y modelos definidos en el código de la aplicación para representar y gestionar los datos almacenados, facilitando la interacción con la base de datos.
+                li.mb-0
                   i.lista-ul__vineta
                   | Caso de uso: aplicaciones que requieren gestionar operaciones de consulta, inserción, actualización y eliminación de datos desde el código, reduciendo la necesidad de trabajar directamente con instrucciones específicas del motor de base de datos. 
 
